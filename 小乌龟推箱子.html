@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>小乌龟推箱子游戏</title>
+    <style type="text/css">
+        *{ margin:0; padding:0;}
+        p{text-align: center;font-size: 30px;color: #000;font-weight: bold;margin: 5px 0}
+        #div1{ position:relative; margin:5px auto 10px;}
+        .pos1{ width:50px; height:50px; background:#666; float:left;}
+        .pos2{ width:50px; height:50px; background:url(img/wall.png) no-repeat; float:left;}
+        .pos3{ width:50px; height:50px; background:red; float:left;}
+        .pos0{ width:50px; height:50px; background:blue; float:left;}
+
+        .box{ width:50px; height:50px; background:url(img/box.png) no-repeat; position:absolute;}
+        .person{ width:50px; height:50px; background:url(img/person.png) no-repeat; position:absolute;}
+
+    </style>
+</head>
+<body>
+    <p>小乌龟，不服来战！</p>
+    <div id="div1"></div>
+</body>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/game.js"></script>
+<script type="text/javascript">
+    var d1 = new $.Game();
+    d1.init($("#div1"),{
+        defaultGk:0
+    })
+</script>
+</html>
